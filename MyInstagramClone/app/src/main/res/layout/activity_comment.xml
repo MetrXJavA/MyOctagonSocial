@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Other.CommentActivity">
+
+    <com.github.siyamed.shapeimageview.OctogonImageView
+        android:id="@+id/commentActivityProfileImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/searchicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siBorderColor="#8BC34A"
+        app:siBorderWidth="3dp" />
+
+
+    <com.github.siyamed.shapeimageview.OctogonImageView
+        android:id="@+id/commentActivityPostImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/searchicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityUsernameTextView"
+        app:siBorderColor="#8BC34A"
+        app:siBorderWidth="10dp" />
+
+    <TextView
+        android:id="@+id/commentActivityUsernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityProfileImageView" />
+
+    <TextView
+        android:id="@+id/commentActivityDetailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityPostImageView" />
+
+
+    <com.github.siyamed.shapeimageview.OctogonImageView
+        android:id="@+id/likeNegativeCommentActivtiy"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_hearth"
+        app:layout_constraintEnd_toEndOf="@+id/commentActivityPostImageView"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityDetailTextView"
+        app:siBorderColor="#D81B60"
+        app:siBorderWidth="2dp" />
+
+    <com.github.siyamed.shapeimageview.OctogonImageView
+        android:id="@+id/likePositiveCommentActivtiy"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_hearth"
+        app:layout_constraintEnd_toEndOf="@+id/commentActivityPostImageView"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityDetailTextView"
+        app:siBorderColor="#8BC34A"
+        app:siBorderWidth="2dp" />
+
+    <TextView
+        android:id="@+id/commentActivityLikeNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/likePositiveCommentActivtiy"
+        app:layout_constraintStart_toStartOf="@+id/likePositiveCommentActivtiy"
+        app:layout_constraintTop_toBottomOf="@+id/likePositiveCommentActivtiy" />
+
+
+    <com.github.siyamed.shapeimageview.OctogonImageView
+        android:id="@+id/commentActivityCommentImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/advise_ic"
+        app:layout_constraintEnd_toStartOf="@+id/likePositiveCommentActivtiy"
+        app:layout_constraintTop_toTopOf="@+id/likePositiveCommentActivtiy"
+        app:siBorderColor="#8BC34A"
+        app:siBorderWidth="2dp" />
+
+    <TextView
+        android:id="@+id/commentActivityCommentNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/commentActivityCommentImageView"
+        app:layout_constraintStart_toStartOf="@+id/commentActivityCommentImageView"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityCommentImageView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentActivityRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentActivityEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentActivityCommentNumberTextView" />
+
+    <EditText
+        android:id="@+id/commentActivityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/background_left"
+        android:ems="10"
+        android:hint="Enter Comment"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendCommentMaterialButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendCommentMaterialButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="#7CB342"
+        app:cornerRadius="50dp"
+        app:icon="@drawable/ic_send"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

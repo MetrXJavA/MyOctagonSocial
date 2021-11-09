@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553620414652",
+    "project_id": "myinstagramproject-cdf57",
+    "storage_bucket": "myinstagramproject-cdf57.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553620414652:android:b8ecb84e3c868e08f470b9",
+        "android_client_info": {
+          "package_name": "com.prometrx.myinstagramclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553620414652-oci5qqgmkdkke4h0rngeffk1tlj4c0d9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADnF9MbIPxMkYfj2yqdyxwO0E4grIdAyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553620414652-oci5qqgmkdkke4h0rngeffk1tlj4c0d9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
